@@ -1,0 +1,35 @@
+.logo {
+  animation: fade-in 1s;
+  position: relative;
+  cursor: pointer;
+}
+
+._link {
+  animation: fade-in 1s;
+  position: relative;
+  cursor: pointer;
+}
+._link::after {
+  content: "";
+  position: absolute;
+  bottom: -0.25rem;
+  right: 100%;
+  height: 0.25rem;
+  translate: 100%;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 0%;
+  background-color: #fff;
+}
+._link:hover::after {
+  width: 100%;
+}
+
+@keyframes fade-in {
+  0% {
+    clip-path: inset(0 100% 90% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}

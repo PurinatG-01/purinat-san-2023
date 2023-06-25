@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  background-color: hsla(137, 0%, 11%, 1);
+  background-image: radial-gradient(
+      at 4% 67%,
+      hsla(203, 80%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 17% 20%, hsla(85, 76%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 18% 86%, hsla(111, 83%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 70% 88%, hsla(173, 72%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 26% 80%, hsla(145, 90%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 15% 46%, hsla(240, 68%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 82% 13%, hsla(312, 89%, 0%, 1) 0px, transparent 50%);
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
